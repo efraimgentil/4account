@@ -1,0 +1,18 @@
+<div>
+	<input type="{{codigoType}}" name="{{codigoName}}" ng-show="{{showCodigo}}" ng-model="codigoVal"  >
+	<input type="{{desc_type}}" name="{{descName}}" ng-show="{{showDesc}}" ng-model="descVal" >
+
+	<button type="button" ng-click="searchModel()">Search</button>
+
+
+	{{listOfValues}}
+	<div class="table">
+		<div class="header">
+			<div ng-transclude="header"></div>
+		</div>
+		<div class="table-body">
+			<div class="table-row" ng-transclude="body" ng-repeat="i in listOfValues track by $index" >
+			</div>
+		</div>
+	</div>	
+</div>

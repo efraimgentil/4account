@@ -1,0 +1,11 @@
+
+
+<style>
+	.selected{ color:red; }
+</style>
+<a class="pagination-nav" ng-click="callAction( 1 )" ng-show="showNavLeft()"><<</a>
+<a class="pagination-nav" ng-click="callAction( pageList.currentPage - 1 )" ng-show="showNavLeft()"><</a>
+<a class="pagination-nav" ng-click="callAction( i )"  ng-repeat="i in linksRange()"
+ ng-class="i == pageList.currentPage ? 'selected' : 'not-selected'" >{{i}}</a>
+<a class="pagination-nav" ng-click="callAction( pageList.currentPage + 1 )" ng-show="showNavRight()" >></a>
+<a class="pagination-nav" ng-click="callAction( pageList.numOfPages )" ng-show="showNavRight()" >>></a>

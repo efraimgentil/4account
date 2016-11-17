@@ -1,0 +1,25 @@
+
+
+<page-title>Loan</page-title>
+
+
+
+<table>
+	<thead>
+		<tr>
+			<th>_</th>
+			<th>Person</th>
+			<th>Value</th>
+			<th>Expiration Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="i in list.list track by $index">
+			<td>{{ i.id }}</td>
+			<td>{{ i.person_name }}</td>
+			<td>{{ i.value | currency }}</td>
+			<td>{{ i.expiration_date | date }}</td>
+		</tr>
+	</tbody>
+</table>
+<pagination page-list="list" action="busca" links="6" ></pagination>
